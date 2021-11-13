@@ -1,0 +1,41 @@
+.footer {
+    background: #282c30;
+    color: white;
+    .social-icons {
+        ul {
+            list-style-type: none;
+        }
+        li a {
+            color: white;
+            transition: color .2s;
+            &:hover {
+                text-decoration: none;
+                color: #4180CB;
+            }
+        }
+    }
+    .about-me {
+        i {
+            font-size: 25px;
+        }
+        a {
+            color: white;
+            transition: color .2s;
+            &:hover {
+                color: #4180CB
+            }
+        }
+    }
+    .menu {
+        i {
+            font-size: 18px;
+        }
+        .menu-item:hover {
+            color: #4180CB;
+            cursor: pointer;
+        }
+    }
+    .copyright p {
+        border-top: 1px solid rgba(255, 255, 255, .1);
+    }
+}
