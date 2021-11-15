@@ -7,6 +7,9 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './layout/header/header.component';
 import { HomeComponent } from './modules/home/home.component';
+import { AboutMeComponent } from './modules/about-me/about-me.component';
+import { PortfolioComponent } from './modules/portfolio/portfolio.component';
+import { PortfolioDetailComponent } from './modules/portfolio/component/portfolio-detail/portfolio-detail.component';
 
 
 @NgModule({
@@ -15,6 +18,9 @@ import { HomeComponent } from './modules/home/home.component';
     FooterComponent,
     HeaderComponent,
     HomeComponent,
+    AboutMeComponent,
+    PortfolioComponent,
+    PortfolioDetailComponent,
   ],
   imports: [
     BrowserModule,

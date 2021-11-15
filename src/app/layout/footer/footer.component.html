@@ -1,21 +1,26 @@
 <div class="pt-5 pb-5 footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-5 col-xs-12 about-me">
-                <img src="../../../assets/images/jakes-footer.png" alt="logo">
+            <div class="col-lg-5 col-xs-12 about-me mt-3">
+                <!-- <img src="../../../assets/images/jakes-footer.png" alt="logo"> -->
+                <h1 class="p-2">Jakes Nguyen</h1>
                 <p class="pr-5 text-white-50">Thanks for visit my website</p>
             </div>
-            <div class="col-lg-3 col-xs-12 social-icons">
-                <h4 class="mt-lg-0 mt-sm-3">Follow Me</h4>
+            <div class="col-lg-3 col-xs-12 social-icons mt-3">
+                <h4 class="mt-lg-0 mt-sm-3">Social Media</h4>
                 <ul class="m-0 p-0">
                     <li><a href="https://www.linkedin.com/in/jakesdeveloper/"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
                     <li><a href="https://www.facebook.com/Jakes.Official"><i class="fab fa-facebook-square"></i> Facebook</a></li>
                     <li><a href="https://www.facebook.com/Jakes.Official"><i class="fab fa-facebook-square"></i> Github</a></li>
                 </ul>
             </div>
-            <div class="col-lg-4 col-xs-12 menu">
-                <h4 class="mt-lg-0 mt-sm-4 menu-item" [routerLink]="['/']">Home</h4>
-                <h4 class="mt-lg-0 mt-sm-4 menu-item" [routerLink]="['/resume']">Resume</h4>
+            <div class="col-lg-4 col-xs-12 menu mt-3">
+                <h4 class="mt-lg-0 mt-sm-3">Link</h4>
+                <ul class="m-0 p-0">
+                    <li><a [routerLink]="['/']">Home</a></li>
+                    <li><a [routerLink]="['/about-me']">About Me</a></li>
+                    <li><a [routerLink]="['/about-me']">Portfolio</a></li>
+                </ul>
             </div>
         </div>
         <div class="row mt-5">

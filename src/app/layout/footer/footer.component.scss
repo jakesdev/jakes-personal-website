@@ -1,5 +1,4 @@
 .footer {
-    background: #282c30;
     color: white;
     .social-icons {
         ul {
@@ -8,6 +7,7 @@
         li a {
             color: white;
             transition: color .2s;
+            text-decoration: none;
             &:hover {
                 text-decoration: none;
                 color: #4180CB;
@@ -25,6 +25,12 @@
                 color: #4180CB
             }
         }
+        h1 {
+            font-family: TheHistoriaDemo;
+            background: linear-gradient(to right, hsl(224, 85%, 66%), hsl(269, 85%, 66%), hsl(314, 85%, 66%), hsl(359, 85%, 66%), hsl(44, 85%, 66%), hsl(89, 85%, 66%), hsl(134, 85%, 66%), hsl(179, 85%, 66%));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
     .menu {
         i {
@@ -33,6 +39,18 @@
         .menu-item:hover {
             color: #4180CB;
             cursor: pointer;
+        }
+        ul {
+            list-style-type: none;
+        }
+        li a {
+            color: white;
+            transition: color .2s;
+            text-decoration: none;
+            &:hover {
+                text-decoration: none;
+                color: #4180CB;
+            }
         }
     }
     .copyright p {
