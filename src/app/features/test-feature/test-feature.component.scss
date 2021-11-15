@@ -1,0 +1,33 @@
+.box {
+  width: 600px;
+  height: 300px;
+}
+
+.cross-x {
+  height: 1px;
+}
+
+.cross-y {
+  height: 1px;
+  transform: rotate(90deg);
+}
+
+.triangle-topleft {
+  border-top: 150px solid red;
+  border-left: 300px solid transparent;
+}
+
+.triangle-topright {
+  border-top: 150px solid red;
+  border-right: 300px solid transparent;
+}
+
+.triangle-botleft {
+  border-bottom: 150px solid yellow;
+  border-left: 300px solid transparent;
+}
+
+.triangle-botright {
+  border-bottom: 150px solid yellow;
+  border-right: 300px solid transparent;
+}

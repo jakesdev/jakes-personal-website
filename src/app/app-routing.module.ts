@@ -1,28 +1,52 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './modules/home/home.component';
-
+import { appConfig } from './core/constants';
+import { AdminGuard, IsLoggedInGuard } from './core/guards';
+import { AboutMeComponent } from './features/about-me/about-me.component';
+import { ErrorComponent } from './features/error/error.component';
+import { HomeComponent } from './features/home/home.component';
+import { TestFeatureComponent } from './features/test-feature/test-feature.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  // { path: 'home', component: HomeComponent },
-  // { path: 'resume', component: ResumeComponent },
-  // { path: 'about-me', component: AboutMeComponent },
-  // { path: 'education', component: EducationComponent },
-  // { path: 'portfolio', component: PortfolioComponent },
-  // { path: 'activites', component: ActivitiesComponent },
-  // { path: 'blog', component: BlogComponent }
+  {
+    path: 'auth',
+    canActivate: [IsLoggedInGuard],
+    loadChildren: () =>
+      import('./features/auth/auth.module').then((m) => m.AuthModule)
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    component: HomeComponent
+  },
+  {
+    path: appConfig.routes.aboutMe.index,
+    component: AboutMeComponent
+  },
+  {
+    path: appConfig.routes.article.index,
+    loadChildren: () =>
+      import('./features/article/article.module').then((m) => m.ArticleModule)
+  },
+  {
+    path: appConfig.routes.admin.index,
+    canActivate: [AdminGuard],
+    loadChildren: () =>
+      import('./features/admin/admin.module').then((m) => m.AdminModule)
+  },
+  {
+    path: 'test-feature',
+    component: TestFeatureComponent
+  },
+
+  {
+    path: '**',
+    component: ErrorComponent,
+  },
 ];
 
 @NgModule({
-  
-  declarations: [],
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes)
-  ],
-  exports: [RouterModule,
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

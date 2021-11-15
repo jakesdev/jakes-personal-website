@@ -1,0 +1,14 @@
+.footer {
+  color: white;
+
+  .about-me-footer {
+    h1 {
+      font-family: TheHistoriaDemo;
+      background: linear-gradient(to right, hsl(224, 85%, 66%), hsl(269, 85%, 66%), hsl(314, 85%, 66%), hsl(359, 85%, 66%), hsl(44, 85%, 66%), hsl(89, 85%, 66%), hsl(134, 85%, 66%), hsl(179, 85%, 66%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+
+}

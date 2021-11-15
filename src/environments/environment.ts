@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  // apiURL: 'https://localhost:4000/api',
+  apiURL: 'https://nest-mongodb-api.onrender.com/api'
 };
 
 /*
