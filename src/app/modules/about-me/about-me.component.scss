@@ -1,0 +1,44 @@
+    .about-me-container {
+        color: #b6b5db;
+        .about-me {
+            background: #d1d1d10d;
+            padding: 24px;
+            border-radius: 10px;
+        }
+        h1 {
+            color: white;
+        }
+        .avatar {
+            border-radius: 100%;
+        }
+        .infomartion {
+            padding: 24px;
+        }
+        .social-list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li {
+                display: inline;
+                font-size: 20px;
+                padding-left: 10px;
+            }
+            li a {
+                color: white;
+                text-decoration: none;
+            }
+            li:hover {
+                transition: color .2s;
+                &:hover {
+                    color: #4180CB
+                }
+            }
+        }
+        .skill-item {
+            img {
+                display: inline-block;
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+        }
+    }
