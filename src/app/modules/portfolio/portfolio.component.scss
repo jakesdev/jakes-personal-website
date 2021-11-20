@@ -12,9 +12,18 @@
         transform: translate(-50%, -50%);
         h1 {
             font-family: TheHistoriaDemo;
+            font-size: 80px;
         }
-        h5 {
+        h6 {
             color: #aaa;
         }
+    }
+}
+
+.bg-card {
+    background-color: #d1d1d10d;
+    color: white;
+    .btn:hover {
+        color: black;
     }
 }

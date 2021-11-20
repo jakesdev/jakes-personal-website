@@ -10,7 +10,7 @@ import { HomeComponent } from './modules/home/home.component';
 import { AboutMeComponent } from './modules/about-me/about-me.component';
 import { PortfolioComponent } from './modules/portfolio/portfolio.component';
 import { PortfolioDetailComponent } from './modules/portfolio/component/portfolio-detail/portfolio-detail.component';
-
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { PortfolioDetailComponent } from './modules/portfolio/component/portfoli
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
