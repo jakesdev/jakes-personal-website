@@ -3,54 +3,70 @@
     .social-icons {
         ul {
             list-style-type: none;
+            display: flex;
+            right: 0;
         }
         li a {
             color: white;
             transition: color .2s;
             text-decoration: none;
+            font-size: 25px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.089);
             &:hover {
                 text-decoration: none;
-                color: #4180CB;
+                color: #ffffff;
             }
+        }
+        .social__list {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: flex-end;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+        .social__item {
+            display: inline-block;
+            margin-left: 8px
+        }
+        .social__item:first-child {
+            margin-left: 0
+        }
+        .social__link {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            line-height: 40px;
+            border-radius: 8px;
+            color: #fff;
+            background-color: #17151e
+        }
+        .social__link:hover {
+            color: #09080f;
+            background-color: #635e5e
         }
     }
     .about-me-footer {
-        i {
-            font-size: 25px;
-        }
-        a {
-            color: white;
-            transition: color .2s;
-            &:hover {
-                color: #4180CB
-            }
-        }
         h1 {
             font-family: TheHistoriaDemo;
             background: linear-gradient(to right, hsl(224, 85%, 66%), hsl(269, 85%, 66%), hsl(314, 85%, 66%), hsl(359, 85%, 66%), hsl(44, 85%, 66%), hsl(89, 85%, 66%), hsl(134, 85%, 66%), hsl(179, 85%, 66%));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-    }
-    .menu {
-        i {
-            font-size: 18px;
-        }
-        .menu-item:hover {
-            color: #4180CB;
-            cursor: pointer;
-        }
-        ul {
-            list-style-type: none;
-        }
-        li a {
-            color: white;
-            transition: color .2s;
-            text-decoration: none;
-            &:hover {
-                text-decoration: none;
-                color: #4180CB;
-            }
         }
     }
     .copyright p {

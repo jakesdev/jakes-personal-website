@@ -1,11 +1,9 @@
 .logo {
     font-family: TheHistoriaDemo;
-    background: linear-gradient(to right, hsl(224, 85%, 66%), hsl(269, 85%, 66%), hsl(314, 85%, 66%), hsl(359, 85%, 66%), hsl(44, 85%, 66%), hsl(89, 85%, 66%), hsl(134, 85%, 66%), hsl(179, 85%, 66%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .header-menu {
     // background-color: rgba(207, 199, 199, 0.082);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Inter, sans-serif;
+    font-weight: bold;
 }

@@ -7,7 +7,7 @@
 } */
 
 body {
-    background-color: rgb(23, 19, 41);
+    background-color: #0d1220;
 }
 
 @font-face {
@@ -58,19 +58,19 @@ body {
 /* Track */
 
  ::-webkit-scrollbar-track {
-    background: linear-gradient(to top, #abbfd1, #00ffe7);
+    background: linear-gradient(to top, #4d494956, #0d1220);
 }
 
 
 /* Handle */
 
  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to top, #008aff, #00ffe7);
+    background: linear-gradient(to top, #19266d54, #0d1220);
 }
 
 
 /* Handle on hover */
 
  ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to top, #008aff, #00ffe7);
+    background: linear-gradient(to top, #19266d54, #0d1220);
 }
