@@ -9,80 +9,39 @@
 <div class="album py-5">
     <div class="container">
         <h1 style="color: white">Professional Project</h1>
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="col-xl-4 col-md-6 col-sm-12" *ngFor="let item of professionalProjects; index as i;">
                 <div class="card shadow-sm bg-card h-100">
-                    <img src="../../../assets/images/hrm.png" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225">
+                    <img [src]="item.thumbnail" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225">
                     <div class="card-body">
-                        <h3>HR*****</h3>
-                        <p class="card-text">Its a professional project when i've worked at Rikkeisoft.</p>
+                        <h3>{{item.projectName}}</h3>
+                        <p class="card-text">{{item.description}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary bg-light">Detail</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary bg-light" (click)="openModalProfessionalProject(professionalProject, item.id)">Detail</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <div class="card shadow-sm bg-card h-100">
-                    <img src="../../../assets/images/flm.png" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225">
-                    <div class="card-body">
-                        <h3>FLM</h3>
-                        <p class="card-text">Its a professional project when i've worked at FPT Software.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary bg-light">Detail</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
     <div class="container mt-5">
         <h1 style="color: white">Side Project</h1>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="col-xl-4 col-md-6 col-sm-12" *ngFor="let item of personalProjects; index as i;">
                 <div class="card shadow-sm bg-card h-100">
-                    <img src="../../../assets/images/web-capstone.png" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225">
+                    <img [src]="item.thumbnail" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225">
                     <div class="card-body">
-                        <h3>Facy Attendance</h3>
-                        <p class="card-text">Capstone Project using AI to recognize student's face and automatically taking attendance.</p>
+                        <h3>{{item.projectName}}</h3>
+                        <p class="card-text">{{item.description}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a type="button" href="https://github.com/facy-attendance/attendance-system-by-face-recognition" target="_blank" class="btn btn-sm btn-outline-secondary bg-light">Github</a>
-                                <button type="button" class="btn btn-sm btn-outline-secondary bg-light">Detail</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <div class="card shadow-sm bg-card h-100">
-                    <img src="../../../assets/images/top-one.png" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225">
-                    <div class="card-body">
-                        <h3>TopOne Employment Agency</h3>
-                        <p class="card-text">A Landing page to introduce a recruiting company.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a type="button" href="https://toponeemployment.ca/" target="_blank" class="btn btn-sm btn-outline-secondary bg-light">Visit</a>
-                                <button type="button" class="btn btn-sm btn-outline-secondary bg-light">Detail</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <div class="card shadow-sm bg-card h-100">
-                    <img src="../../../assets/images/bau-cua-tom-ca.jpg" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225">
-                    <div class="card-body">
-                        <h3>Bau Cua Tom Ca</h3>
-                        <p class="card-text">HTML Basic page I've created for fun when its nearly Tet holiday.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href type="button" href="https://baucuatomca.netlify.app/" target="_blank" class="btn btn-sm btn-outline-secondary bg-light">Visit</a>
-                                <button type="button" class="btn btn-sm btn-outline-secondary bg-light">Detail</button>
+                                <a type="button" *ngIf="item.githubLink" [href]="item.githubLink" target="_blank" class="btn btn-sm btn-outline-secondary bg-light">Github</a>
+                                <a type="button" *ngIf="item.visitLink" [href]="item.visitLink" target="_blank" class="btn btn-sm btn-outline-secondary bg-light">Visit</a>
+                                <button type="button" class="btn btn-sm btn-outline-secondary bg-light" (click)="openModalPersonalProject(sideProject, item.id)">Detail</button>
                             </div>
                         </div>
                     </div>
@@ -92,3 +51,34 @@
     </div>
 </div>
 <app-footer></app-footer>
+
+<ng-template #professionalProject>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left" id="my-modal-title">{{professionalProjectDetail.projectName}}</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+                    <span aria-hidden="true" class="visually-hidden">&times;</span>
+                  </button>
+    </div>
+    <div class="modal-body">
+        <div id="my-modal-description" [innerHTML]="professionalProjectDetail.content">
+            This is a modal.
+        </div>
+    </div>
+
+</ng-template>
+
+<ng-template #sideProject>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left" id="my-modal-title">{{sideProjectDetail.projectName}}</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+          </button>
+    </div>
+    <div class="modal-body">
+        <div id="my-modal-description" [innerHTML]="sideProjectDetail.content">
+            This is a modal.
+        </div>
+    </div>
+
+
+</ng-template>
