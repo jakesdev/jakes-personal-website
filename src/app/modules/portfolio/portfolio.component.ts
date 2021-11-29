@@ -23,14 +23,45 @@ export class PortfolioComponent implements OnInit {
         id: '1',
         projectName: 'HR****',
         description:`Its a professional project when I've worked at Rikkeisoft.`,
-        content:``,
+        content:`
+        <h5>Description</h5>
+        <p>It is a Human Resource Management Website for a company. </p>
+        <h5>Assigned phase :</h5>
+        <p>Coding</p>
+        <h5>Specific feature:</h5>
+        <p>- Dashboard management</p>
+        <p>- Employee/candidate management</p>
+        <p>- Policy / Company Event management</p>
+        <p>- Employee contract, information, paper, skill sheet, resource allocation management</p>
+        <p></p>
+        <h5>Technology: </h5>
+        <p>Angular / Spring Boot / MongoDB</p>
+        <h5>My Responsibility</h5>
+        <p>Created API</p>
+        <p>Created Front End from Designed File</p>
+        `,
         thumbnail: '../../../assets/images/hrm.png'
       },
       {
         id: '2',
         projectName: 'FLM***',
         description:`Its a professional project when i've worked at FPT Software.`,
-        content:``,
+        content:`
+        <h5>Description</h5>
+        <p>At the end of 2020, FLASH is no longer supported so my project is converting FLASH to ANGULAR.
+        </p>
+        <h5>Assigned phase :</h5>
+        <p>Pilot 1: Coding / Unit Test Case</p>
+        <h5>Specific feature:</h5>
+        <p>- Employee/customer management</p>
+        <p>- Gas/ Electricity Sales Management </p>
+        <p></p>
+        <h5>Technology: </h5>
+        <p>Angular / Docker</p>
+        <h5>My Responsibility</h5>
+        <p>Converting ActionScript to Typescript</p>
+        <p>Unit Test Case/ Unit Test Report</p>
+        `,
         thumbnail: '../../../assets/images/flm.png'
       }
     ];
