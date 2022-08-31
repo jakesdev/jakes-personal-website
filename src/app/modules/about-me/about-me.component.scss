@@ -28,7 +28,7 @@
         padding: 24px;
         border-radius: 10px;
         .about-me-bg-color {
-            background: #d1d1d10d;
+            background: #dcdcdc0d;
             border-radius: 10px;
         }
         .timeline {
@@ -131,6 +131,15 @@
                 background: #333C42;
                 border-radius: 2px;
                 padding: 1em;
+                a {
+                    font-weight: bold;
+                    font-size: 24px;
+                    color: white;
+                    text-decoration: none;
+                }
+                .academic {
+                    font-size: 16px;
+                }
                 .timeline-content-info {
                     background: #2a2b2f4d;
                     padding: 5px 10px;

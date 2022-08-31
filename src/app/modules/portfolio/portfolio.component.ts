@@ -111,7 +111,6 @@ export class PortfolioComponent implements OnInit {
         description:`A Landing page to introduce a recruiting company.`,
         content:`
         <p>A Landing page to introduce a recruiting company</p>
-        <p>Im using template to making this site</p>
         <img src="../../../assets/images/top-one.png" width="100%">
         <p></p>
         <p>Live : <a href="https://toponeemployment.ca/" target="_blank">https://toponeemployment.ca/</a></p>
