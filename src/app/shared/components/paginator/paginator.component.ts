@@ -1,22 +1,22 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule } from "@angular/common";
 import {
   Component,
   EventEmitter,
   Input,
   OnChanges,
   Output,
-  SimpleChanges
-} from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { initialPagination, PaginationModel } from 'src/app/core/models';
+  SimpleChanges,
+} from "@angular/core";
+import { MatIconModule } from "@angular/material/icon";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { initialPagination, PaginationModel } from "src/app/core/models";
 
-import { DOTS, initialPageSizeOption, PageSizeOption } from './options';
+import { DOTS, initialPageSizeOption, PageSizeOption } from "./options";
 
 @Component({
-  selector: 'mp-paginator',
-  templateUrl: './paginator.component.html',
-  styleUrls: ['./paginator.component.scss'],
+  selector: "app-paginator",
+  templateUrl: "./paginator.component.html",
+  styleUrls: ["./paginator.component.scss"],
   standalone: true,
   imports: [CommonModule, MatPaginatorModule, MatIconModule],
 })
@@ -42,17 +42,17 @@ export class PaginatorComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (
       changes &&
-      changes['pagination'] &&
-      changes['pagination']['currentValue'] &&
+      changes["pagination"] &&
+      changes["pagination"]["currentValue"] &&
       this.pagination != null
     ) {
       this.pageRange = this.paginationRange();
       this.lastPage = this.pageRange[this.pageRange?.length - 1] as number;
 
-      if (changes['pagination'].firstChange) {
+      if (changes["pagination"].firstChange) {
         this.selectedPageSizeOption = initialPageSizeOption.find(
           (option) =>
-            option.value === this.pagination!.take || option.value < 0
+            option.value === this.pagination!.limit || option.value < 0
         )!;
       }
     }
@@ -69,8 +69,7 @@ export class PaginatorComponent implements OnChanges {
     if (this.pagination)
       this.pageChange.emit({
         ...this.pagination,
-        page:
-          this.pagination.page > 1 ? this.pagination.page - 1 : 1,
+        page: this.pagination.page > 1 ? this.pagination.page - 1 : 1,
       });
   }
 
@@ -89,9 +88,7 @@ export class PaginatorComponent implements OnChanges {
 
     const page = !!this.pagination && this.pagination?.page | 1;
     const totalCount: number =
-      this.pagination &&
-      this.pagination.itemCount &&
-        this.pagination.itemCount
+      this.pagination && this.pagination.itemCount && this.pagination.itemCount
         ? this.pagination.itemCount
         : 0;
     const pageCount = Math.ceil(totalCount / Math.abs(pageOption.value));

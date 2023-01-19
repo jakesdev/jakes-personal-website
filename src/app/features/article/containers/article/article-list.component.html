@@ -1,15 +1,22 @@
 <div class="bg-blue-50">
-
-  <div class="border-x bg-white mx-auto max-w-7xl items-center justify-between  md:justify-start md:space-x-10 ">
-    <h1 class="font-extrabold py-4 text-[32px] text-center">
-      Articles
-    </h1>
-
-    <!-- <ng-container *ngFor="let item of articles">
-      <app-article-box [title]="item.title"
-                       [createdAt]="item.createdAt"
-                       [description]="item.description"
-                       [slug]="'article/' + item.slug"></app-article-box>
-    </ng-container> -->
+  <div
+    class="border-x bg-white mx-auto max-w-7xl items-center justify-between md:justify-start md:space-x-10"
+  >
+    <h1 class="font-extrabold py-4 text-[32px] text-center">Articles</h1>
+    <div class="px-2">
+      <ng-container *ngFor="let item of articles">
+        <app-article-box
+          [title]="item.title"
+          [createdAt]="item.createdAt"
+          [description]="item.description"
+          [slug]="'article/' + item.slug"
+        ></app-article-box>
+      </ng-container>
+      <app-paginator
+        [pagination]="pageOption"
+        (pageChange)="onChangePagination($event)"
+      >
+      </app-paginator>
+    </div>
   </div>
 </div>

@@ -10,10 +10,10 @@
     >
       <li
         [ngClass]="{
-          selected: option.value === selectedtakeOption?.value
+          selected: option.value === selectedlimitOption?.value
         }"
-        *ngFor="let option of takeOptions"
-        (click)="ontakeOptionChange(option)"
+        *ngFor="let option of limitOptions"
+        (click)="onlimitOptionChange(option)"
       >
         {{ option.label }}
       </li>
@@ -44,14 +44,13 @@
         *ngFor="let page of pageRange; let i = index"
         (click)="page !== dots && onPageChange(page)"
       >
-        {{ page === dots ? '&#8230;' : page }}
+        {{ page === dots ? "&#8230;" : page }}
       </li>
       <li
         class="pagination-item"
         [ngClass]="{
           disabled:
-            pagination.page === pagination.pageCount ||
-            pagination.take === -1
+            pagination.page === pagination.pageCount || pagination.limit === -1
         }"
         (click)="onNext()"
       >

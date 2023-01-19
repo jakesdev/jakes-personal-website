@@ -1,6 +1,6 @@
-import { SortDirection } from '@angular/material/sort';
+import { SortDirection } from "@angular/material/sort";
 
-export interface TableFilterModel {
+export interface SearchFilterModel {
   searchKey?: string;
 
   isSolved?: boolean;
@@ -11,20 +11,20 @@ export interface TableFilterModel {
 
   page: number;
 
-  take: number;
+  limit: number;
 }
 export interface TableSortModel {
   sortType: SortDirection;
   sortBy: string;
 }
 
-export const initialFilter: TableFilterModel = {
+export const initialFilter: SearchFilterModel = {
   page: 1,
-  take: 10,
-  createdAt: 'DESC',
+  limit: 5,
+  createdAt: "DESC",
 };
 
 export const initialSort: TableSortModel = {
-  sortType: 'desc',
-  sortBy: 'createdAt',
+  sortType: "desc",
+  sortBy: "createdAt",
 };

@@ -1,10 +1,14 @@
-export interface PaginationModel {
-  limit: number;
+export class PaginationModel {
+  limit!: number;
   itemCount?: number;
   pageCount?: number;
   hasPreviousPage?: boolean;
   hasNextPage?: boolean;
-  page: number;
+  page!: number;
+
+  public constructor(init?: Partial<PaginationModel>) {
+    Object.assign(this, init);
+  }
 }
 
 export const initialPagination: PaginationModel = {

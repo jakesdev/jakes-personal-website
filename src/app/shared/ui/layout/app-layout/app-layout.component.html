@@ -1,159 +1,69 @@
 <div class="relative bg-slate-100">
-  <div class="pointer-events-none absolute inset-0 z-30"
-       aria-hidden="true"></div>
+  <div
+    class="pointer-events-none absolute inset-0 z-30"
+    aria-hidden="true"
+  ></div>
   <div class="relative z-20">
-    <div class="mx-auto bg-white border-b border-x flex max-w-7xl items-center justify-between py-4 px-6 sm:py-4 md:justify-start md:space-x-10 lg:px-8">
+    <div
+      class="mx-auto bg-white border-b border-x flex max-w-7xl items-center justify-between py-4 px-6 sm:py-4 md:justify-start md:space-x-10 lg:px-8"
+    >
       <div>
-        <a href="/"
-           class="flex">
+        <a href="/" class="flex">
           <span class="sr-only">Your Company</span>
-          <svg xmlns="http://www.w3.org/2000/svg"
-               fill="none"
-               viewBox="0 0 24 24"
-               stroke-width="1.5"
-               stroke="currentColor"
-               class="w-6 h-6">
-            <path stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+            />
           </svg>
-
         </a>
       </div>
       <div class="-my-2 -mr-2 md:hidden">
-        <button type="button"
-                (click)="headerMenu = true"
-                class="inline-flex items-center justify-center rounded-md bg-white p-2 text-black hover:bg-gray-100 hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
-                aria-expanded="false">
+        <button
+          type="button"
+          (click)="headerMenu = true"
+          class="inline-flex items-center justify-center rounded-md bg-white p-2 text-black hover:bg-gray-100 hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+          aria-expanded="false"
+        >
           <span class="sr-only">Open menu</span>
           <!-- Heroicon name: outline/bars-3 -->
-          <svg class="h-6 w-6"
-               xmlns="http://www.w3.org/2000/svg"
-               fill="none"
-               viewBox="0 0 24 24"
-               stroke-width="1.5"
-               stroke="currentColor"
-               aria-hidden="true">
-            <path stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          <svg
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
           </svg>
         </button>
       </div>
       <div class="hidden md:flex md:flex-1 md:items-center md:justify-between">
         <nav class="flex space-x-10">
-          <a href="/about-me"
-             class="text-base font-medium text-black hover:text-blue-900">About Me</a>
-          <div>
-            <!-- Item active: "text-black", Item inactive: "text-black" -->
-            <button type="button"
-                    class="text-black group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                    aria-expanded="false"
-                    (click)="blogMenu = !blogMenu">
-              <span>Article</span>
-              <!--
-                Heroicon name: mini/chevron-down
-
-                Item active: "text-gray-600", Item inactive: "text-black"
-              -->
-              <svg class="text-black ml-2 h-5 w-5 group-hover:text-blue-900"
-                   [ngClass]="{'text-gray-600': blogMenu}"
-                   xmlns="http://www.w3.org/2000/svg"
-                   viewBox="0 0 20 20"
-                   fill="currentColor"
-                   aria-hidden="true">
-                <path fill-rule="evenodd"
-                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                      clip-rule="evenodd" />
-              </svg>
-            </button>
-
-            <!--
-              'Solutions' flyout menu, show/hide based on flyout menu state.
-
-              Entering: "transition ease-out duration-200"
-                From: "opacity-0 -translate-y-1"
-                To: "opacity-100 translate-y-0"
-              Leaving: "transition ease-in duration-150"
-                From: "opacity-100 translate-y-0"
-                To: "opacity-0 -translate-y-1"
-            -->
-            <div class="absolute bg-slate-100 inset-x-0 top-full z-10 hidden transform md:block"
-                 *ngIf="blogMenu">
-              <div class="mx-auto bg-white shadow-lg max-w-7xl border-x sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
-                <div class="grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 ">
-                  <a href="article/design-paterns"
-                     class="-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-gray-50">
-                    <div class="flex md:h-full lg:flex-col">
-
-                      <div class="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
-                        <div>
-                          <p class="text-base font-medium text-black">Design Patterns</p>
-                          <p class="mt-1 text-sm text-black">Get a better understanding of typical solutions to commonly occurring problems in software design.</p>
-                        </div>
-
-                      </div>
-                    </div>
-                  </a>
-
-                  <a href="article/object-oriented-programming"
-                     class="-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-gray-50">
-                    <div class="flex md:h-full lg:flex-col">
-
-                      <div class="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
-                        <div>
-                          <p class="text-base font-medium text-black">Object Oriented Programming</p>
-                          <p class="mt-1 text-sm text-black">Speak directly to your customers in a more meaningful way.</p>
-                        </div>
-
-                      </div>
-                    </div>
-                  </a>
-
-                  <a href="article/software-development-principles"
-                     class="-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-gray-50">
-                    <div class="flex md:h-full lg:flex-col">
-
-                      <div class="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
-                        <div>
-                          <p class="text-base font-medium text-black">Software Development Principles</p>
-                          <p class="mt-1 text-sm text-black">Your customers&#039; data will be safe and secure.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a href="article/interview-question"
-                     class="-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-gray-50">
-                    <div class="flex md:h-full lg:flex-col">
-                      <div class="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
-                        <div>
-                          <p class="text-base font-medium text-black">Interview Question</p>
-                          <p class="mt-1 text-sm text-black">Connect with third-party tools that you&#039;re already using.</p>
-                        </div>
-
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8">
-                  <div class="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
-                    <a href="/article"
-                       class="inline-block w-fit rounded-lg bg-blue-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-blue-600 hover:bg-blue-700 hover:ring-blue-700">
-                      Read more article
-                      <span class="text-blue-200"
-                            aria-hidden="true">&rarr;</span>
-                    </a>
-
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-          </div>
+          <a href="/about-me" class="text-base font-medium hover:text-blue-500"
+            >About Me</a
+          >
+          <a href="/article" class="text-base font-medium hover:text-blue-500"
+            >Article</a
+          >
         </nav>
-        <div class="flex items-center md:ml-12 text-slate-500 cursor-pointer">
+        <div
+          class="flex items-center md:ml-12 text-slate-500 hover:text-blue-500 cursor-pointer"
+        >
           jakes.developer@gmail.com
         </div>
       </div>
@@ -170,40 +80,54 @@
       From: "opacity-100 scale-100"
       To: "opacity-0 scale-95"
   -->
-  <div class="absolute inset-x-0 top-0 z-30 origin-top-right ease-in-out delay-150 transform p-2 transition transition-all md:hidden"
-       *ngIf="headerMenu">
-    <div class="divide-y-2 divide-gray-50 rounded-lg bg-white ring-1 ring-black ring-opacity-5">
+  <div
+    class="absolute inset-x-0 top-0 z-30 origin-top-right ease-in-out delay-150 transform p-2 transition transition-all md:hidden"
+    *ngIf="headerMenu"
+  >
+    <div
+      class="divide-y-2 divide-gray-50 rounded-lg bg-white ring-1 ring-black ring-opacity-5"
+    >
       <div class="px-5 pt-5 pb-6 sm:pb-8">
         <div class="flex items-center justify-between">
           <a href="/">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 fill="none"
-                 viewBox="0 0 24 24"
-                 stroke-width="1.5"
-                 stroke="currentColor"
-                 class="w-6 h-6">
-              <path stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+              />
             </svg>
           </a>
 
           <div class="-mr-2">
-            <button type="button"
-                    (click)="headerMenu = false"
-                    class="inline-flex items-center justify-center rounded-md bg-white p-2 text-black hover:bg-gray-100 hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+            <button
+              type="button"
+              (click)="headerMenu = false"
+              class="inline-flex items-center justify-center rounded-md bg-white p-2 text-black hover:bg-gray-100 hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+            >
               <span class="sr-only">Close menu</span>
               <!-- Heroicon name: outline/x-mark -->
-              <svg class="h-6 w-6"
-                   xmlns="http://www.w3.org/2000/svg"
-                   fill="none"
-                   viewBox="0 0 24 24"
-                   stroke-width="1.5"
-                   stroke="currentColor"
-                   aria-hidden="true">
-                <path stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18L18 6M6 6l12 12" />
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>
@@ -211,13 +135,19 @@
         <div class="mt-6 sm:mt-8">
           <nav>
             <div class="grid gap-7 sm:grid-cols-2 sm:gap-y-8 sm:gap-x-4">
-              <a href="/about-me"
-                 class="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50">
+              <a
+                href="/about-me"
+                class="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50"
+              >
                 <!--icon-->
-                <div class="ml-4 text-base font-medium text-black">About Me</div>
+                <div class="ml-4 text-base font-medium text-black">
+                  About Me
+                </div>
               </a>
-              <a href="/article"
-                 class="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50">
+              <a
+                href="/article"
+                class="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50"
+              >
                 <!--icon-->
                 <div class="ml-4 text-base font-medium text-black">Article</div>
               </a>
@@ -226,9 +156,7 @@
         </div>
       </div>
       <div class="py-6 px-5">
-        <div class="mt-6 cursor-pointer">
-          jakes.developer@gmail.com
-        </div>
+        <div class="mt-6 cursor-pointer">jakes.developer@gmail.com</div>
       </div>
     </div>
   </div>
@@ -236,8 +164,9 @@
 
 <ng-content></ng-content>
 <div class="home-container bg-slate-100 border-b">
-
-  <div class="mx-auto max-w-7xl border-t border-x bg-white gap-y-6 px-6 sm:gap-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-4 footer">
+  <div
+    class="mx-auto max-w-7xl border-t border-x bg-white gap-y-6 px-6 sm:gap-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-4 footer"
+  >
     <div class="container">
       <div class="col-12 about-me-footer mt-3">
         <!-- <img src="../../../assets/images/jakes-footer.png" alt="logo"> -->
@@ -245,7 +174,12 @@
       </div>
       <div class="mt-5">
         <div class="col copyright">
-          <p class=""><small class="text-black">{{year}} <span class="text-black">©Jakes</span>. All Rights Reserved.</small></p>
+          <p class="">
+            <small class="text-black"
+              >{{ year }} <span class="text-black">©Jakes</span>. All Rights
+              Reserved.</small
+            >
+          </p>
         </div>
       </div>
     </div>
