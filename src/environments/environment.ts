@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // apiURL: 'https://localhost:4000/api',
-  apiURL: "https://nest-api-mongodb-k1xm.vercel.app",
+  apiURL: "https://nest-api-mongodb-k1xm.vercel.app/api",
 };
 
 /*
