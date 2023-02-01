@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiURL: 'https://nest-mongodb-api.onrender.com/api'
+  apiURL: "https://nest-api-mongodb-k1xm.vercel.app",
 };
